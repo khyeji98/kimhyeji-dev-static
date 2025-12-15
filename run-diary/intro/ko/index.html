@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Diary (달림일기) - 당신의 러닝 파트너</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css">
+    <style>
+        :root {
+            /* 🎨 테마 컬러 (현재: iOS Blue) */
+            --primary-color: #007AFF;
+            --text-color: #1d1d1f;
+            --bg-secondary: #f5f5f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        .container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 헤더 수정됨: 상단 여백 추가 및 로고 사이즈 확대 */
+        header { 
+            padding-top: 60px;    /* 상단 여백 추가 */
+            padding-bottom: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo { 
+            font-weight: 800; 
+            font-size: 1.8rem;    /* 로고 사이즈 1.3rem -> 1.8rem 확대 */
+            text-decoration: none; 
+            color: #000; 
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-secondary) 100%);
+        }
+        
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.2; }
+        .hero .intro-text { font-size: 1.25rem; color: #6e6e73; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        .download-btn {
+            display: inline-block; background-color: var(--primary-color); color: #fff;
+            padding: 14px 32px; border-radius: 30px; text-decoration: none;
+            font-weight: 600; font-size: 1.1rem; transition: transform 0.2s, background-color 0.2s;
+        }
+        .download-btn:hover { transform: scale(1.03); background-color: #0062cc; }
+
+        /* 기능 소개 섹션 */
+        .features { padding: 100px 0; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 60px; }
+        
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+        .feature-item { text-align: center; padding: 20px; }
+        .feature-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
+        .feature-item h3 { margin-bottom: 15px; font-size: 1.5rem; font-weight: 700; }
+        .feature-item p { color: #6e6e73; font-size: 1.05rem; }
+
+        /* 하단 메시지 수정됨: 텍스트에 딱 맞게(fit) 조정 */
+        .closing-message {
+            text-align: center;
+            width: fit-content;       /* 텍스트 너비에 맞춤 */
+            margin: 60px auto;        /* 중앙 정렬 */
+            padding: 20px 40px;       /* 적당한 내부 여백 */
+            background-color: var(--bg-secondary);
+            border-radius: 50px;      /* 둥근 알약 모양 */
+            font-weight: 600;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer { background-color: #fbfbfd; padding: 50px 0; text-align: center; font-size: 0.9rem; color: #86868b; border-top: 1px solid #eee;}
+        footer a { color: #86868b; text-decoration: none; margin: 0 12px; }
+        footer a:hover { text-decoration: underline; color: var(--primary-color); }
+        .contact-info { margin-top: 20px; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .intro-text { font-size: 1.1rem; }
+            .feature-grid { gap: 30px; }
+            /* 모바일에서는 메시지 박스가 너무 좁아지지 않도록 */
+            .closing-message { width: auto; margin: 40px 20px; border-radius: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <a href="/" class="logo">달림일기</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                
+                <h1>당신의 모든 러닝 여정을<br>기록하고 성장하세요!</h1>
+                
+                <p class="intro-text">
+                    '달림일기'는 당신을 위한 완벽한 러닝 동반자입니다.<br>
+                    매일의 기록을 체계적으로 관리하고, 꾸준한 동기 부여를 통해 더 나은 러너로 성장하세요.
+                </p>
+
+                <a href="#" class="download-btn">App Store에서 다운로드</a>
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2 class="section-title">주요 기능</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🏃‍♂️</span>
+                    <h3>직관적인 러닝 기록</h3>
+                    <p>달린 거리, 시간, 페이스는 물론 날씨와 컨디션까지.<br>주요 러닝 데이터를 손쉽게 기록하고 저장하세요.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">❤️</span>
+                    <h3>Apple 건강 데이터 통합</h3>
+                    <p>Apple 건강(Health)과 연동하여 심박수, 소모 칼로리 등 핵심 데이터를 자동으로 가져옵니다.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📈</span>
+                    <h3>통계 및 성장 추적</h3>
+                    <p>월간 누적 거리를 확인하며<br>당신의 꾸준함을 한눈에 파악할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="closing-message">
+                🏃‍♂️ 더 나은 서비스를 제공하기 위해 다양한 기능과 사용 경험을 개선해 나가겠습니다!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="../privacy-policy/">개인정보처리방침</a> | 
+            <a href="../use-of-terms/">이용약관</a>
+            
+            <p class="contact-info">
+                궁금한 점이 있으시면, <a href="mailto:run-diary@kimhyeji.dev">run-diary@kimhyeji.dev</a>로 문의해주세요.
+            </p>
+            <br>
+            <p>&copy; 2025 HYEJI KIM. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

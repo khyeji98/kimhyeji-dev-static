@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Diary - Your Running Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css">
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #1d1d1f;
+            --bg-secondary: #f5f5f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        .container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Updated Header Design */
+        header { 
+            padding-top: 60px; 
+            padding-bottom: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo { 
+            font-weight: 800; 
+            font-size: 1.8rem; 
+            text-decoration: none; 
+            color: #000; 
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg, #fff 0%, var(--bg-secondary) 100%);
+        }
+        
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.2; }
+        .hero .intro-text { font-size: 1.25rem; color: #6e6e73; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        .download-btn {
+            display: inline-block; background-color: var(--primary-color); color: #fff;
+            padding: 14px 32px; border-radius: 30px; text-decoration: none;
+            font-weight: 600; font-size: 1.1rem; transition: transform 0.2s, background-color 0.2s;
+        }
+        .download-btn:hover { transform: scale(1.03); background-color: #0062cc; }
+
+        .features { padding: 100px 0; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 60px; }
+        
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+        .feature-item { text-align: center; padding: 20px; }
+        .feature-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
+        .feature-item h3 { margin-bottom: 15px; font-size: 1.5rem; font-weight: 700; }
+        .feature-item p { color: #6e6e73; font-size: 1.05rem; }
+
+        /* Updated Message Box Design */
+        .closing-message {
+            text-align: center;
+            width: fit-content;
+            margin: 60px auto;
+            padding: 20px 40px;
+            background-color: var(--bg-secondary);
+            border-radius: 50px;
+            font-weight: 600;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer { background-color: #fbfbfd; padding: 50px 0; text-align: center; font-size: 0.9rem; color: #86868b; border-top: 1px solid #eee;}
+        footer a { color: #86868b; text-decoration: none; margin: 0 12px; }
+        footer a:hover { text-decoration: underline; color: var(--primary-color); }
+        .contact-info { margin-top: 20px; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .intro-text { font-size: 1.1rem; }
+            .feature-grid { gap: 30px; }
+            .closing-message { width: auto; margin: 40px 20px; border-radius: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <a href="/" class="logo">Run Diary</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Track your running journey<br>and grow every day!</h1>
+                
+                <p class="intro-text">
+                    'Run Diary' is your perfect running companion.<br>
+                    Manage your daily records systematically and grow into a better runner with constant motivation.
+                </p>
+
+                <a href="#" class="download-btn">Download on the App Store</a>
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🏃‍♂️</span>
+                    <h3>Intuitive Recording</h3>
+                    <p>Easily record distance, time, pace, weather, and your condition in one place.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">❤️</span>
+                    <h3>Apple Health Integration</h3>
+                    <p>Syncs automatically with Apple Health to track heart rate, calories burned, and more.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📈</span>
+                    <h3>Statistics & Growth</h3>
+                    <p>Visualize your consistency and progress with monthly distance charts.</p>
+                </div>
+            </div>
+
+            <div class="closing-message">
+                🏃‍♂️ We will continue to improve features and user experience to provide better service!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="../privacy-policy/">Privacy Policy</a> | 
+            <a href="../use-of-terms/">Terms of Use</a>
+            
+            <p class="contact-info">
+                If you have any questions, please contact <a href="mailto:run-diary@kimhyeji.dev">run-diary@kimhyeji.dev</a>
+            </p>
+            <br>
+            <p>&copy; 2025 HYEJI KIM. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
